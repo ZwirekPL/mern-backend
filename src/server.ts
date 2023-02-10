@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 
 const port = env.PORT;
 
+let log= {""}
 mongoose
   .connect(env.MONGO_CONNECTION_STRING)
   .then(() => {
