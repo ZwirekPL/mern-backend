@@ -1,4 +1,3 @@
-// import { RequestHandler } from "express-serve-static-core";
 import { RequestHandler } from "express";
 import createHttpError from "http-errors";
 import mongoose from "mongoose";
