@@ -93,12 +93,14 @@ export const login: RequestHandler<
       .select("+password +email")
       .exec();
     if (!user) {
-      throw createHttpError(401, "Invalid credetnials");
+      // throw createHttpError(401, "Invalid credetnials");
+      throw createHttpError(401, "Invalid username");
     }
 
     const passwordMatch = await bcrypt.compare(password, user.password);
     if (!passwordMatch) {
-      throw createHttpError(401, "Invalid credetnials");
+      // throw createHttpError(401, "Invalid credetnials");
+      throw createHttpError(401, "Invalid password");
     }
 
     req.session.userId = user._id;
