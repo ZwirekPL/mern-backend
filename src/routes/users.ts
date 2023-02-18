@@ -4,12 +4,25 @@ import { requiresAuth } from "../middleware/auth";
 
 const router = express.Router();
 
-router.get("/", requiresAuth, UserController.getAuthenticatedUser);
+router.get(
+  "https://try-notes-backend.onrender.com/",
+  requiresAuth,
+  UserController.getAuthenticatedUser
+);
 
-router.post("/signup", UserController.signUp);
+router.post(
+  "https://try-notes-backend.onrender.com/signup",
+  UserController.signUp
+);
 
-router.post("/login", UserController.login);
+router.post(
+  "https://try-notes-backend.onrender.com/login",
+  UserController.login
+);
 
-router.post("/logout", UserController.logout);
+router.post(
+  "https://try-notes-backend.onrender.com/logout",
+  UserController.logout
+);
 
 export default router;
