@@ -10,19 +10,10 @@ router.get(
   NotesController.getNote
 );
 
-router.post(
-  "https://try-notes-backend.onrender.com/",
-  NotesController.createNote
-);
+router.post("/", NotesController.createNote);
 
-router.patch(
-  "https://try-notes-backend.onrender.com/:noteId",
-  NotesController.updateNote
-);
+router.patch("/:noteId", NotesController.updateNote);
 
-router.delete(
-  "https://try-notes-backend.onrender.com/:noteId",
-  NotesController.deleteNote
-);
+router.delete("/:noteId", NotesController.deleteNote);
 
 export default router;

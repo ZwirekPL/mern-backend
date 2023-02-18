@@ -10,19 +10,10 @@ router.get(
   UserController.getAuthenticatedUser
 );
 
-router.post(
-  "https://try-notes-backend.onrender.com/signup",
-  UserController.signUp
-);
+router.post("/signup", UserController.signUp);
 
-router.post(
-  "https://try-notes-backend.onrender.com/login",
-  UserController.login
-);
+router.post("/login", UserController.login);
 
-router.post(
-  "https://try-notes-backend.onrender.com/logout",
-  UserController.logout
-);
+router.post("/logout", UserController.logout);
 
 export default router;
